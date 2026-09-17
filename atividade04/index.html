@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARA</title>
+</head>
+<body>
+   
+    <img src="img/logo.png"  
+    alt="Logo da AgroVale Cooperativa"
+    width="400"
+    height="120">
+
+    <h1>ARA/ Adoção, Responsabilidade e Amor</h1>
+    
+    <ul>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#adocao">Adoção</a></li>
+        <li><a href="#contato">Contato</a></li>    
+    </ul>
+
+    <h2 id="sobre">Sobre os Animais e a Adoção</h2>
+    <p>
+        A AgroVale <strong>é uma Cooperativa muito relevante</strong> no Vale do São Patrício. Ela foi fundada em 1987
+        por produtores rurais da região de Ceres e Rialma, no Cerrado goiano.
+    </p>
+
+    <h2>Atenção <strong><em>Porque adotar animais</em></strong></h2>
+    <p><strong>Adotar animais</strong> é uma ação de grande importância, pois contribui para o bem-estar dos animais e para a sociedade como um todo. 
+        Ao adotar um animal, você está oferecendo a ele uma segunda chance de ter uma vida digna e feliz, além de ajudar a reduzir o número de animais abandonados nas ruas. 
+        A adoção também promove a conscientização sobre a <strong>responsabilidade de cuidar de um ser vivo</strong>.
+    </p>
+
+    <h2 id="adocao">Adoção</h2>
+    <p>Como adotar com Responsabilidade</p>
+
+    <!-- Formulário temático -->
+    <form id="form-adocao" action="#" method="post">
+      <!-- Fieldset 1: Dados pessoais -->
+      <fieldset>
+        <legend>Dados Pessoais</legend>
+
+        <label for="nome-adocao">Nome completo:</label>
+        <input type="text" id="nome-adocao" name="nome" minlength="3" required><br><br>
+
+        <label for="cpf-adocao">CPF:</label>
+        <input type="number" id="CPF-adocao" name="cpf" minlength="3" required pattern="\(\d{2}\)\s?\d{4,5}-\d{4}"
+               placeholder="000.000.000-00"
+               title="Formato:000.000.000-00 "
+               ><br><br>
+
+         <label for="cep-adocao">CEP:</label>
+        <input type="number" id="cep-adocao" name="cep" minlength="3" required pattern="\(\d{2}\)\s?\d{4,5}-\d{4}"
+               placeholder="75300-000"
+               title="Formato:000.000.000-00 "
+               ><br><br>
+
+
+        <label for="email-adocao">E-mail:</label>
+        <input type="email" id="email-adocao" name="email" required><br><br>
+
+        <label for="idade">Idade:</label>
+        <input type="number" id="idade" name="idade" min="18" required><br><br>
+
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" name="telefone"
+               pattern="\(\d{2}\)\s?\d{4,5}-\d{4}"
+               placeholder="(62) 99999-0000"
+               title="Formato: (DD) 99999-0000"
+               required><br><br>
+      </fieldset>
+
+      <!-- Fieldset 2: Preferências de adoção -->
+      <fieldset>
+        <legend>Preferências de Adoção</legend>
+
+        <label for="animal">Tipo de animal:</label>
+        <select id="animal" name="animal" required>
+          <option value="">Selecione...</option>
+          <option value="cachorro">Cachorro</option>
+          <option value="gato">Gato</option>
+          <option value="ave">Ave</option>
+          <option value="outro">Outro</option>
+        </select><br><br>
+
+        <p>Você já possui outros animais?</p>
+        <input type="radio" id="sim" name="possui_animais" value="sim" required>
+        <label for="sim">Sim</label>
+        <input type="radio" id="nao" name="possui_animais" value="nao">
+        <label for="nao">Não</label><br><br>
+
+        <p>Quais condições você pode oferecer?</p>
+        <input type="checkbox" id="espaco" name="condicoes" value="espaco">
+        <label for="espaco">Espaço adequado</label><br>
+        <input type="checkbox" id="tempo" name="condicoes" value="tempo">
+        <label for="tempo">Tempo para cuidados</label><br>
+      </fieldset>
+
+      <button type="submit">Enviar Solicitação</button>
+    </form>
+
+    <!-- Formulário de contato -->
+    <h2 id="contato">Contato</h2>
+    <form id="form-contato" action="#" method="post">
+      <fieldset>
+        <legend>Dúvida? Entre em contato</legend>
+
+        <label for="nome-contato">Seu nome</label>
+        <input type="text" id="nome-contato" name="nome" minlength="3" required><br>
+
+        <label for="email-contato">Seu e-mail</label>
+        <input type="email" id="email-contato" name="email" required><br>
+
+        <label for="mensagem">Mensagem</label><br>
+        <textarea id="mensagem" name="mensagem" rows="5" minlength="10" required></textarea><br>
+
+        <button type="submit">Enviar</button>
+      </fieldset>
+    </form>
+
+</body>
+</html>
